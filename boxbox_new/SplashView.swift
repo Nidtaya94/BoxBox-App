@@ -8,28 +8,22 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SplashView: View {
     var body: some View {
       ZStack{
-        Color(.white).edgesIgnoringSafeArea(.all)
+        Color(red:1.0, green:1.0, blue:1.0, opacity:1.0)
+          .edgesIgnoringSafeArea(.all)
         VStack{
           Image("logo")
           .resizable()
           .aspectRatio(contentMode: .fit)
-            .frame(width : 200, height: 200)
-        Text("ใช้เวลาดีๆที่มีความสุขของคุณ..")
-          .font(.system(size:18))
-          .foregroundColor(.black)
-          Text("กับน้องหมาที่คุณรัก")
-          .font(.system(size:18))
-          .foregroundColor(.black)
-          
+          .frame(width : 200, height: 200)
           }
       }
    }
 }
-struct ContentView_Previews: PreviewProvider {
+struct View_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SplashView()
     }
 }

@@ -9,10 +9,32 @@
 import SwiftUI
 
 struct LoginView: View {
+  @State var usernameTextField = ""
+  @State var passwordTextField = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        ZStack{
+          Color(red:1.0, green:1.0, blue:1.0, opacity:1.0)
+                  .edgesIgnoringSafeArea(.all)
+                VStack{
+                  Image("logo")
+                  .resizable()
+                  .aspectRatio(contentMode: .fit)
+                  .frame(width : 200, height: 200)
+                  
+                    Text("Welcome to BoxBox")
+                        .font(.body)
+                  .foregroundColor(.black)
+                  
+                  TextField("Enter username or email", text: $usernameTextField )
+                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                  TextField("Enter password", text: $passwordTextField )
+                  .textFieldStyle(RoundedBorderTextFieldStyle())
+                  
+                  
+                  }
+              }
+           }
+        }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
